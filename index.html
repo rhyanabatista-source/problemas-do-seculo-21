@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Tech do Século 21</title>
+    <style>
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: rgba(22, 27, 46, 0.8);
+            --text-color: #f0f3f9;
+            --neon-pink: #ff007f;
+            --neon-blue: #00f0ff;
+            --neon-purple: #a100ff;
+            --neon-yellow: #ffea00;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.4);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--neon-yellow);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3);
+        }
+
+        .card.html:hover { border-color: var(--neon-pink); }
+        .card.css:hover { border-color: var(--neon-blue); }
+        .card.java:hover { border-color: var(--neon-yellow); }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .html .tag { background-color: var(--neon-pink); color: #fff; }
+        .css .tag { background-color: var(--neon-blue); color: #000; }
+        .java .tag { background-color: var(--neon-yellow); color: #000; }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #a0a5c0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Problemas Tech do Século 21</h1>
+        <p>Como HTML, CSS e Java enfrentam a nova era digital</p>
+    </header>
+
+    <main class="container">
+
+        <article class="card html">
+            <img src="https://picsum.photos/600/400?random=1" alt="Ilustração sobre Acessibilidade e Estrutura Web">
+            <div class="card-content">
+                <span class="tag">HTML5</span>
+                <h2>Acessibilidade Universal & SEO Neural</h2>
+                <p>O desafio atual da marcação HTML é garantir semanticidade perfeita para leitores de tela e inteligências artificiais que rastreiam a web em busca de contexto real.</p>
+            </div>
+        </article>
+
+        <article class="card css">
+            <img src="https://picsum.photos/600/400?random=2" alt="Ilustração de Telas Múltiplas e Design Fluido">
+            <div class="card-content">
+                <span class="tag">CSS3</span>
+                <h2>Telas Dobráveis e Fragmentação</h2>
+                <p>Criar layouts que se adaptam instantaneamente a dispositivos dobráveis, telas ultrawide e interfaces vestíveis exige arquiteturas de estilo ultra-flexíveis.</p>
+            </div>
+        </article>
+
+        <article class="card java">
+            <img src="https://picsum.photos/600/400?random=3" alt="Ilustração de Servidores em Nuvem e Processamento">
+            <div class="card-content">
+                <span class="tag">JAVA</span>
+                <h2>Alta Escala e Computação em Nuvem</h2>
+                <p>O ecossistema Java enfrenta o desafio de manter sistemas bancários e corporativos seguros, rodando em microsserviços distribuídos com menor consumo de memória.</p>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>
